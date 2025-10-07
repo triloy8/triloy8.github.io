@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ page.title }} | {{ site.title }}</title>
+    {%- seo -%}
+    <link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="{{ '/feed.xml' | relative_url }}">
+    <style>
+      :root { --maxw: 720px; --pad: 1rem; font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; }
+      body { margin: 0; }
+      header, main, footer { max-width: var(--maxw); margin: 0 auto; padding: var(--pad); }
+      header { border-bottom: 1px solid #ddd; }
+      nav a { margin-right: .75rem; text-decoration: none; }
+      h1, h2, h3 { line-height: 1.2; }
+      .muted { color: #666; font-size: .9rem; }
+      ul.posts { list-style: none; padding-left: 0; }
+      ul.posts li { margin: .5rem 0; }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1 style="margin:0;"><a href="{{ '/' | relative_url }}" style="text-decoration:none; color:inherit;">{{ site.title }}</a></h1>
+      <p class="muted" style="margin:.25rem 0 0;">{{ site.description }}</p>
+      <nav style="margin-top:.5rem;">
+        <a href="{{ '/' | relative_url }}">Home</a>
+        <a href="{{ '/about/' | relative_url }}">About</a>
+        <a href="{{ '/feed.xml' | relative_url }}">Feed</a>
+      </nav>
+    </header>
+    <main>
+      {{ content }}
+    </main>
+    <footer class="muted">
+      <p>&copy; {{ 'now' | date: '%Y' }} {{ site.title }} — Built with <a href="https://jekyllrb.com/">Jekyll</a> &amp; hosted on <a href="https://pages.github.com/">GitHub Pages</a>.</p>
+    </footer>
+  </body>
+</html>

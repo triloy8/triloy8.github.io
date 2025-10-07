@@ -1,0 +1,12 @@
+title: triloy8's blog
+description: A tiny blog powered by Jekyll on GitHub Pages.
+url: "https://triloy8.github.io"
+baseurl: "" # "/my-repo" for a project site
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# time
+timezone: Europe/Paris
+permalink: /:year/:month/:day/:title/
